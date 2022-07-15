@@ -12,12 +12,15 @@
         <entry key="..\:/Kuliah/Android Studio Project/UAS_android/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
         <entry key="..\:/Kuliah/Android Studio Project/UAS_android/app/src/main/res/layout/activity_main.xml" value="0.19537037037037036" />
         <entry key="..\:/Kuliah/Android Studio Project/UAS_android/app/src/main/res/layout/activity_mods.xml" value="0.25416666666666665" />
+        <entry key="app/src/main/res/drawable/ic_vape_launcher_background.xml" value="0.221" />
+        <entry key="app/src/main/res/drawable/informasi.xml" value="0.221" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/activity_informasi.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.3507692307692308" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.14629629629629629" />
         <entry key="app/src/main/res/layout/activity_mods.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/bar_layout.xml" value="0.35625" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_vape_launcher.xml" value="0.198" />
       </map>
     </option>
   </component>

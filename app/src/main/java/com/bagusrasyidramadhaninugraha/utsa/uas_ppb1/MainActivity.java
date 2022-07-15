@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         });
         image = findViewById(R.id.img);
 
-        String path = "android.resource://com.h1.videoscreen/"+R.raw.screen;
+        String path = "android.resource://com.bagusrasyidramadhaninugraha.utsa.uas_ppb1/"+R.raw.screen;
 
         Uri uri = Uri.parse(path);
         view.setVideoURI(uri);
