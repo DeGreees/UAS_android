@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">UAS_PPB1</string>
+    <string name="prefStatus">loggedin</string>
+</resources>
