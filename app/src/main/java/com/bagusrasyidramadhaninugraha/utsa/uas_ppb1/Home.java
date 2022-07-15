@@ -19,9 +19,9 @@ public class Home extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         sharedPreferences = getSharedPreferences("UserInfo",
                 Context.MODE_PRIVATE);
+        btn4 = findViewById(R.id.btn4);
 
         btn4.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View view) {
                 Intent intentku =  new Intent(Home
