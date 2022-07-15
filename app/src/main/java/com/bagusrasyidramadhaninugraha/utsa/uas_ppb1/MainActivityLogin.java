@@ -32,14 +32,14 @@ public class MainActivityLogin extends AppCompatActivity {
                 Context.MODE_PRIVATE);
         username = findViewById(R.id.edusername);
         password = findViewById(R.id.edpassword);
-        exit = findViewById(R.id.button3);
+        exit = findViewById(R.id.button2);
         exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
         });
-        login = findViewById(R.id.button2);
+        login = findViewById(R.id.button1);
         login.setOnClickListener(v -> {
             String tex_username = Objects
                     .requireNonNull(username.getText()).toString();

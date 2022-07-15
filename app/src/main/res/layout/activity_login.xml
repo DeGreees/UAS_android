@@ -47,7 +47,7 @@
         android:layout_below="@+id/edpassword"
         android:layout_alignLeft="@+id/edpassword"
         android:layout_marginTop="31dp"
-        android:text="Register" />
+        android:text="Login" />
 
     <Button
         android:id="@+id/button2"
@@ -58,16 +58,6 @@
         android:layout_marginLeft="37dp"
         android:layout_marginBottom="0dp"
         android:layout_toRightOf="@+id/button1"
-        android:text="Login" />
+        android:text="KELUAR" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button2"
-        android:layout_alignBottom="@+id/button2"
-        android:layout_marginLeft="34dp"
-        android:layout_marginBottom="-1dp"
-        android:layout_toRightOf="@+id/button2"
-        android:text="Keluar" />
 </RelativeLayout>
