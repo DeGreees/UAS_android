@@ -62,7 +62,7 @@ public class MainActivityLogin extends AppCompatActivity {
         progressDialog.setCanceledOnTouchOutside(false);
         progressDialog.setIndeterminate(false);
         progressDialog.show();
-        String uRl = "http://192.168.1.67/sql/login.php";
+        String uRl = "http://192.168.201.161/sql/login.php";
         StringRequest request = new StringRequest(Request.Method.POST,
                 uRl,
                 (String response) -> {
