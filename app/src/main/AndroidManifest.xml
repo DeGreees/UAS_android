@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -17,6 +18,12 @@
         android:theme="@style/Theme.UAS_PPB1"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <activity
+            android:name=".liquid"
+            android:exported="false" />
+        <activity
+            android:name=".rda"
+            android:exported="false" />
         <activity
             android:name=".MainActivityLogin"
             android:exported="false" />
