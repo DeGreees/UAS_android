@@ -19,13 +19,13 @@ public class adapterliquid extends RecyclerView.Adapter<adapterliquid.ViewHolder
 
     private ArrayList<String> fotoliquid = new ArrayList<>();
     private ArrayList<String> namaliquid = new ArrayList<>();
-//    private ArrayList<String> hargaliquid = new ArrayList<>();
+    private ArrayList<String> hargaliquid = new ArrayList<>();
     private Context context;
 
-    public adapterliquid(ArrayList<String> fotoliquid, ArrayList<String> namaLiquid, Context context) {
+    public adapterliquid(ArrayList<String> fotoliquid, ArrayList<String> namaLiquid, ArrayList<String> hargaLiquid, Context context) {
         this.fotoliquid = fotoliquid;
         namaliquid = namaLiquid;
-//        hargaliquid = hargaliquid;
+        hargaliquid = hargaLiquid;
         this.context = context;
     }
 
@@ -43,7 +43,7 @@ public class adapterliquid extends RecyclerView.Adapter<adapterliquid.ViewHolder
         Glide.with(context).asBitmap().load(fotoliquid.get(position)).into(holder.imageViewGbrLiquid);
 
         holder.textViewMainTitle.setText(namaliquid.get(position));
-//        holder.textViewSubTitle.setText(hargaliquid.get(position));
+        holder.textViewSubTitle.setText(hargaliquid.get(position));
         holder.imageViewGbrLiquid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -67,6 +67,7 @@ public class adapterliquid extends RecyclerView.Adapter<adapterliquid.ViewHolder
             super(itemView);
             imageViewGbrLiquid = itemView.findViewById(R.id.gbrliquid);
             textViewMainTitle = itemView.findViewById(R.id.rawtitleliquid);
+            textViewSubTitle = itemView.findViewById(R.id.rawsubliquid);
         }
     }
 }

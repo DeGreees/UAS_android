@@ -10,7 +10,7 @@ import android.widget.EditText;
 
 public class reload extends AppCompatActivity {
     Button button;
-    EditText editnama, editalamat, editbarang, editpesanmods1;
+    EditText editnama, editalamat, editbarang, editpesanrda1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,7 +18,8 @@ public class reload extends AppCompatActivity {
         editnama = findViewById(R.id.namplgrda1);
         editalamat = findViewById(R.id.alamatplgrda1);
         editbarang = findViewById(R.id.jmlbrgrda1);
-        editpesanmods1 = findViewById(R.id.editpesanrda1);
+        editpesanrda1 = findViewById(R.id.editpesanrda1);
+
         button = findViewById(R.id.btnkirimrda1);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -26,17 +27,16 @@ public class reload extends AppCompatActivity {
                 String pesan = editnama.getText().toString();
                 String pesan2 = editalamat.getText().toString();
                 String pesan3 = editbarang.getText().toString();
-                String pesan4 = editpesanmods1.getText().toString();
+                String pesan4 = editpesanrda1.getText().toString();
 
-                String semuapesan = "Nama: " + pesan + "\n" + "Alamat: " + pesan2 +
-                        "Barang: " + pesan3 + "\n" + "Pesan Kepada Penjual: " + pesan4;
+                String semuapesan = "Nama: " + pesan + "\n" + "Alamat: " + pesan2 + "\n"
+                      +  "Barang: " + pesan3 + "\n" + "Pesan Kepada Penjual: " + pesan4;
                 Intent kirimwa = new Intent(Intent.ACTION_SEND);
                 kirimwa.setType("text/plain");
                 kirimwa.putExtra(Intent.EXTRA_TEXT, semuapesan);
 
-                // iki seng ndek no iku no ku, coba engko gantien no mu ben masuk wa ne nang wa mu
 
-                kirimwa.putExtra("jid", "628887125515" + "@a.whatsapp.net");
+                kirimwa.putExtra("jid", "082141988172" + "@a.whatsapp.net");
                 kirimwa.setPackage("com.whatsapp");
                 startActivity(kirimwa);
             }

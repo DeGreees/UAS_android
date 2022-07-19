@@ -25,6 +25,14 @@
             android:layout_margin="5dp"
             android:id="@+id/rawtitleliquid"
             android:textSize="20sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sub Title"
+            android:textColor="@color/black"
+            android:layout_margin="5dp"
+            android:id="@+id/rawsubliquid"
+            android:textSize="16sp"/>
 
 
 

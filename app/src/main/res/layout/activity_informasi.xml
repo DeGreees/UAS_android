@@ -68,6 +68,42 @@
         android:textSize="18dp"
         android:textStyle="bold"/>
 
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="20dp"
+        android:text="Copyright By"
+
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:text="STIKI MALANG"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="18dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="20dp"
+        android:text="Development By"
+
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:text="Derajat dan Rama"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="18dp"
+        android:textStyle="bold"/>
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="2dp"
