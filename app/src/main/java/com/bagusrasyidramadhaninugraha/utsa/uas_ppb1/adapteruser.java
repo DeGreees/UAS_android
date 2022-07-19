@@ -38,7 +38,7 @@ public class adapteruser {
         public void onCreate(SQLiteDatabase db)
         {
             db.execSQL(DATABASE_CREATE);
-            db.execSQL("insert into users values ('1','saya','saya');");
+            db.execSQL("insert into users values ('1','saya','saya')");
         }
         @Override
         public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
@@ -77,7 +77,7 @@ public class adapteruser {
     }
     public boolean Login(String username, String password) throws SQLException {
         Cursor mCursor = db.rawQuery("SELECT * FROM "
-                        + DATABASE_TABLE + " WHERE username=?"
+                        + DATABASE_TABLE + " WHERE username=? AND password=?"
                 , new String[]{username,password});
         if (mCursor != null) {
             if(mCursor.getCount() > 0)

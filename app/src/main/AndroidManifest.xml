@@ -19,7 +19,22 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".admin"
+            android:name=".freya"
+            android:exported="false" />
+        <activity
+            android:name=".athena"
+            android:exported="false" />
+        <activity
+            android:name=".alexa"
+            android:exported="false" />
+        <activity
+            android:name=".reload"
+            android:exported="false" />
+        <activity
+            android:name=".foxy"
+            android:exported="false" />
+        <activity
+            android:name=".hexohm"
             android:exported="false" />
         <activity
             android:name=".liquid"

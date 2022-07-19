@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".athena">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/namplgliquid1"
+        android:hint="Nama"
+        android:inputType="textPersonName"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/namplgliquid1"
+        android:id="@+id/alamatplgliquid1"
+        android:hint="Alamat"
+        android:inputType="textPersonName"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/jmlbrgliquid1"
+        android:layout_below="@id/alamatplgliquid1"
+        android:hint="Barang"
+        android:inputType="textPersonName"/>
+
+    <EditText
+        android:id="@+id/editpesanliquid1"
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:layout_below="@id/jmlbrgliquid1"
+        android:gravity="top|left"
+        android:hint="Tuliskan Pesan di sini" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editpesanliquid1"
+        android:id="@+id/btnkirimliquid1"
+        android:hint="KIRIM"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+</RelativeLayout>

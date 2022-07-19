@@ -16,6 +16,12 @@
         <entry key="..\:/Kuliah/Android Studio Project/UAS_android/app/src/main/res/layout/activity_mods.xml" value="0.25416666666666665" />
         <entry key="app/src/main/res/drawable/ic_vape_launcher_background.xml" value="0.221" />
         <entry key="app/src/main/res/drawable/informasi.xml" value="0.221" />
+        <entry key="app/src/main/res/layout/activity_admin.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/activity_alexa.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/activity_athena.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/activity_foxy.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/activity_freya.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/activity_hexohm.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/activity_informasi.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/activity_liquid.xml" value="0.35625" />
@@ -23,6 +29,7 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.14629629629629629" />
         <entry key="app/src/main/res/layout/activity_mods.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_rda.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/activity_reload.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/bar_layout.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/rowliquid.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/rowmods.xml" value="0.35625" />

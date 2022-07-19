@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".foxy">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/namplgmod2"
+        android:hint="Nama"
+        android:inputType="textPersonName"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/namplgmod2"
+        android:id="@+id/alamatplgmod2"
+        android:hint="Alamat"
+        android:inputType="textPersonName"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/jmlbrgmod2"
+        android:layout_below="@id/alamatplgmod2"
+        android:hint="Barang"
+        android:inputType="textPersonName"/>
+
+    <EditText
+        android:id="@+id/editpesanmod2"
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:layout_below="@id/jmlbrgmod2"
+        android:gravity="top|left"
+        android:hint="Tuliskan Pesan di sini" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editpesanmod2"
+        android:id="@+id/btnkirimmod2"
+        android:hint="KIRIM"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+</RelativeLayout>

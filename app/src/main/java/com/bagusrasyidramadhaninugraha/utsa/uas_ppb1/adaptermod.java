@@ -1,6 +1,7 @@
 package com.bagusrasyidramadhaninugraha.utsa.uas_ppb1;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,11 +20,13 @@ public class adaptermod extends RecyclerView.Adapter<adaptermod.ViewHolder> {
 
     private ArrayList<String> fotomod = new ArrayList<>();
     private ArrayList<String> NamaMod = new ArrayList<>();
+    private ArrayList<String> HargaMod = new ArrayList<>();
     private Context context;
 
-    public adaptermod(ArrayList<String> fotomod, ArrayList<String> namaMod, Context context) {
+    public adaptermod(ArrayList<String> fotomod, ArrayList<String> namaMod, ArrayList<String> hargaMod, Context context) {
         this.fotomod = fotomod;
         NamaMod = namaMod;
+        HargaMod = hargaMod;
         this.context = context;
     }
 
@@ -41,7 +44,17 @@ public class adaptermod extends RecyclerView.Adapter<adaptermod.ViewHolder> {
         Glide.with(context).asBitmap().load(fotomod.get(position)).into(holder.imageViewGbrMod);
 
         holder.textViewMainTitle.setText(NamaMod.get(position));
+        holder.textViewSubTitle.setText(HargaMod.get(position));
+        holder.imageViewGbrMod.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), hexohm.class);
+                v.getContext().startActivity(i);
+            }
+        });
+
     }
+    
 
     @Override
     public int getItemCount() {
@@ -57,6 +70,7 @@ public class adaptermod extends RecyclerView.Adapter<adaptermod.ViewHolder> {
             super(itemView);
             imageViewGbrMod = itemView.findViewById(R.id.gbrmod);
             textViewMainTitle = itemView.findViewById(R.id.rawtitlemod);
+            textViewSubTitle = itemView.findViewById(R.id.rawsubmods);
         }
     }
 }
