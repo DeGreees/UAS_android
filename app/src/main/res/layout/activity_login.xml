@@ -58,7 +58,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/button1"
         android:layout_alignBottom="@+id/button1"
-        android:layout_marginLeft="37dp"
+        android:layout_marginLeft="41dp"
         android:layout_marginBottom="0dp"
         android:layout_toRightOf="@+id/button1"
         android:text="KELUAR" />
@@ -69,8 +69,8 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/button2"
         android:layout_alignBottom="@+id/button2"
-        android:layout_marginLeft="166dp"
-        android:layout_marginBottom="-3dp"
+        android:layout_marginLeft="175dp"
+        android:layout_marginBottom="0dp"
         android:layout_toRightOf="@+id/button1"
         android:text="REGISTER" />
 
