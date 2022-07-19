@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -21,85 +22,100 @@ import com.android.volley.Request;
 import com.android.volley.toolbox.StringRequest;
 
 public class MainActivityLogin extends AppCompatActivity {
-    EditText username,password;
-    Button login, exit;
-    SharedPreferences sharedPreferences;
+    public static final String MyPREFERENCES = "MyPrefs" ;
+    public static final String name = "nameKey";
+    public static final String pass = "passwordKey";
+    SharedPreferences sharedpreferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-        sharedPreferences = getSharedPreferences("UserInfo",
-                Context.MODE_PRIVATE);
-        username = findViewById(R.id.edusername);
-        password = findViewById(R.id.edpassword);
-        exit = findViewById(R.id.button2);
-        exit.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.activity_login); final EditText txtUserName = (EditText) findViewById(R.id.editText1);
+        final EditText txtPassword = (EditText) findViewById(R.id.editText2);
+        Button btnLogin = (Button) findViewById(R.id.button1);
+        Button btnRegister = (Button) findViewById(R.id.button2);
+        Button btnKeluar = (Button) findViewById(R.id.button3);
+        btnKeluar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+
+                Intent i = new Intent(MainActivityLogin.this, MainActivity.class);
+                startActivity(i);
+
+            }
+        });
+        btnRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+
+                String username = txtUserName.getText().toString();
+                String password = txtPassword.getText().toString();
+                try {
+                    adapteruser dbaUser = new adapteruser(MainActivityLogin.this);
+                    dbaUser.open();
+                    if (dbaUser.Register(username, password)) {
+                        Toast.makeText(MainActivityLogin.this
+                                , "Create Data", Toast.LENGTH_LONG).show();
+                    } else {
+                        Toast.makeText(MainActivityLogin.this
+                                , "Tambah Username/Password"
+                                , Toast.LENGTH_LONG).show();
+                    }
+                    dbaUser.close();
+                } catch (Exception e) {
+// TODO: handle exception
+                    Toast.makeText(MainActivityLogin.this, e.getMessage()
+                            , Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+        btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
-            }
-        });
-        login = findViewById(R.id.button1);
-        login.setOnClickListener(v -> {
-            String tex_username = Objects
-                    .requireNonNull(username.getText()).toString();
-            String tex_password = Objects
-                    .requireNonNull(password.getText()).toString();
-            if (TextUtils.isEmpty(tex_username) || TextUtils.isEmpty(tex_password)){
-                Toast.makeText(MainActivityLogin.this,
-                        "All Fields Required", Toast.LENGTH_SHORT).show();
-            }
-            else{
-                login(tex_username,tex_password);
+                String username = txtUserName.getText().toString();
+                String password = txtPassword.getText().toString();
+                try {
+                    if (username.length() > 0 && password.length() > 0) {
+                        adapteruser dbUser = new adapteruser(MainActivityLogin.this);
+                        dbUser.open();
+                        if (dbUser.Login(username, password)) {
+                            Toast.makeText(MainActivityLogin.this
+                                    , "Successfully Logged In"
+                                    , Toast.LENGTH_LONG).show();
+                            Intent kela = new Intent(MainActivityLogin.this
+                                    , Home.class);
+                            startActivity(kela);
+                        } else {
+                            Toast.makeText(MainActivityLogin.this
+                                    , "Invalid Username/Password"
+                                    , Toast.LENGTH_LONG).show();
+                        }
+                        dbUser.close();
+                    }
+                } catch (Exception e) {
+                    Toast.makeText(MainActivityLogin.this, e.getMessage()
+                            , Toast.LENGTH_LONG).show();
+                }
             }
         });
     }
-    private void login(final String username, final String password){
-        final ProgressDialog progressDialog = new ProgressDialog(
-                MainActivityLogin.this);
-        progressDialog.setTitle("Login your account");
-        progressDialog.setCancelable(false);
-        progressDialog.setCanceledOnTouchOutside(false);
-        progressDialog.setIndeterminate(false);
-        progressDialog.show();
-        String uRl = "http://192.168.1.40/sql/login.php";
-        StringRequest request = new StringRequest(Request.Method.POST,
-                uRl,
-                (String response) -> {
-                    if (response.equals("Login Success")){
-                        Toast.makeText(MainActivityLogin.this,
-                                response, Toast.LENGTH_SHORT).show();
-                        SharedPreferences.Editor editor = sharedPreferences.edit();
-                        editor.apply();
-                        startActivity(new Intent(MainActivityLogin
-                                .this,Home.class));
-                        progressDialog.dismiss();
-                        finish();
-                    }
-                    else {
-                        Toast.makeText(MainActivityLogin.this,
-                                response, Toast.LENGTH_SHORT).show();
-                        progressDialog.dismiss();
-                    }
-                }, error -> {
-            Toast.makeText(MainActivityLogin.this,
-                    error.toString(), Toast.LENGTH_SHORT).show();
-            progressDialog.dismiss();
-        }){
-            @Override
-            protected Map<String, String> getParams() {
-                HashMap<String,String> param = new HashMap<>();
-                param.put("username",username);
-                param.put("password",password);
-                return param;
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+// Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+    @Override
+    protected void onResume() {
+        sharedpreferences=getSharedPreferences(MyPREFERENCES,
+                Context.MODE_PRIVATE);
+        if (sharedpreferences.contains(name))
+        {
+            if(sharedpreferences.contains(pass)){
+                Intent i = new Intent(this, MainActivity.class);
+                startActivity(i);
             }
-        };
-        request.setRetryPolicy(
-                new DefaultRetryPolicy(30000,
-                        DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
-                        DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+        }
+        super.onResume();
+    }
 
-        MySingleton.getmInstance(MainActivityLogin.this).
-                addToRequestQueue(request);
-    }
 }

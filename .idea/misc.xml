@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.20989583333333334" />
         <entry key="..\:/Kuliah/Android Studio Project/UAS_PPB1/app/src/main/res/layout/activity_home.xml" value="0.25416666666666665" />
         <entry key="..\:/Kuliah/Android Studio Project/UAS_PPB1/app/src/main/res/layout/activity_informasi.xml" value="0.25416666666666665" />
         <entry key="..\:/Kuliah/Android Studio Project/UAS_PPB1/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
@@ -25,6 +26,8 @@
         <entry key="app/src/main/res/layout/rowliquid.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/rowmods.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/rowrda.xml" value="0.35625" />
+        <entry key="app/src/main/res/menu/main.xml" value="0.35625" />
+        <entry key="app/src/main/res/menu/menu.xml" value="0.35625" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_vape_launcher.xml" value="0.198" />
       </map>
     </option>

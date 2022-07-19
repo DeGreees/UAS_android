@@ -30,8 +30,10 @@ public class MainActivity extends AppCompatActivity {
         exit = findViewById(R.id.btnexit);
         exit.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                finish();
+            public void onClick(View arg0) {
+                moveTaskToBack(true);
+                android.os.Process.killProcess(android.os.Process.myPid());
+                System.exit(1);
             }
         });
         image = findViewById(R.id.img);

@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivityLogin">
-
+    tools:context=".MainActivity">
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
@@ -13,42 +12,37 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="21dp"
         android:text="Username" />
-
     <EditText
-        android:id="@+id/edusername"
+        android:id="@+id/editText1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView1"
         android:layout_alignLeft="@+id/textView1"
         android:layout_marginTop="10dp">
-
         <requestFocus />
     </EditText>
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/edusername"
-        android:layout_alignLeft="@+id/edusername"
+        android:layout_below="@+id/editText1"
+        android:layout_alignLeft="@+id/editText1"
         android:layout_marginTop="21dp"
         android:text="Password" />
-
     <EditText
-        android:id="@+id/edpassword"
+        android:id="@+id/editText2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView2"
         android:layout_alignLeft="@+id/textView2"
         android:layout_marginTop="10dp"
         android:inputType="textPassword" />
-
     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/edpassword"
-        android:layout_alignLeft="@+id/edpassword"
+        android:layout_below="@+id/editText2"
+        android:layout_alignLeft="@+id/editText2"
         android:layout_marginTop="31dp"
         android:text="Login" />
 
@@ -58,10 +52,10 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/button1"
         android:layout_alignBottom="@+id/button1"
-        android:layout_marginLeft="41dp"
+        android:layout_marginLeft="55dp"
         android:layout_marginBottom="0dp"
         android:layout_toRightOf="@+id/button1"
-        android:text="KELUAR" />
+        android:text="Register" />
 
     <Button
         android:id="@+id/button3"
@@ -69,9 +63,8 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/button2"
         android:layout_alignBottom="@+id/button2"
-        android:layout_marginLeft="175dp"
-        android:layout_marginBottom="0dp"
-        android:layout_toRightOf="@+id/button1"
-        android:text="REGISTER" />
-
+        android:layout_marginLeft="45dp"
+        android:layout_marginBottom="-1dp"
+        android:layout_toRightOf="@+id/button2"
+        android:text="Keluar" />
 </RelativeLayout>
