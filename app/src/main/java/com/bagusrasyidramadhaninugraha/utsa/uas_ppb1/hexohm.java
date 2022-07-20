@@ -38,7 +38,7 @@ public class    hexohm extends AppCompatActivity {
                 kirimwa.putExtra(Intent.EXTRA_TEXT, semuapesan);
 
 
-                kirimwa.putExtra("jid", "082141988172" + "@a.whatsapp.net");
+                kirimwa.putExtra("jid", "6282141988172" + "@a.whatsapp.net");
                 kirimwa.setPackage("com.whatsapp");
 
                 startActivity(kirimwa);
